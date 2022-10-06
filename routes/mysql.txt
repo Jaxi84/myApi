@@ -1,0 +1,10 @@
+use netdb;
+
+create table student(
+id_student int primary key auto_increment,
+fname varchar(50),
+lname varchar(50),
+student_group char(2));
+
+insert into student(fname,lname,student_group) values('Maija,'Meikalainen','7a');
+insert into student(fname,lname,student_group) values('Erkki','Esimerkki','7a');
