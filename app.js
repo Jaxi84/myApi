@@ -4,13 +4,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-<<<<<<< Updated upstream
 var bookRouter = require('./routes/book');
-=======
-const bookRouter = require('./routes/book');
-
->>>>>>> Stashed changes
+var studentRouter = require('./routes/student');
+var userRouter = require('./routes/user');
+var loginRouter = require('./routes/login');
 
 var app = express();
 
@@ -21,7 +18,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/book', bookRouter);
+app.use('/student', studentRouter);
+app.use('/user', userRouter);
+app.use('/login', loginRouter);
 
 module.exports = app;
